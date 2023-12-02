@@ -1,0 +1,15 @@
+{
+    "actions": {
+        "command": "off",
+        "id": "ShellyBulbDuo-98CDAC2D21F9",
+        "param": []
+    },
+    "condition": {
+        "command": "on",
+        "id": "shellyplug-s-80646F815A57",
+        "msg": "messaggio_plug",
+        "operator": "="
+    },
+    "name": "Prova2",
+    "status": "enabled"
+}

@@ -1,0 +1,18 @@
+{
+    "actions": {
+        "command": "WriteCSV",
+        "id": "NULL",
+        "param": [
+            "prova",
+            "true"
+        ]
+    },
+    "condition": {
+        "command": "28",
+        "id": "shellyht-6EF519",
+        "msg": "messaggio_temperature",
+        "operator": "<"
+    },
+    "name": "Funzioni",
+    "status": "enabled"
+}

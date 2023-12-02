@@ -1,0 +1,153 @@
+
+CREATE------------------------------------------------------------------------------------------------------------
+{
+    "name": "pippo",
+    "status": "enabled",
+    "condition": 
+        {            
+            "id": "ID",
+            "msg": "msg",
+            "operator": "<",
+            "command": "Valore" 
+        },
+    "actions": 
+        {
+            "id": "ID",
+            "command": "Comando"
+        }
+    
+}
+
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"Spegni\",\"status\":\"enabled\",\"condition\":{\"id\":\"shellyplug-s-80646F815A57\",\"msg\":\"messaggio_plug\",\"operator\":\"=\",\"command\":\"off\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"command\":\"off\"}}
+
+Status--------------------------------------------------------------------------------------------------------------
+
+{
+    "name": "pippo",
+    "status": "enabled"
+}
+
+mosquitto_pub -h localhost -t Shelly/StateRoutines/ -m {\"name\":\"Spegni\",\"status\":\"enabled\"}
+
+Delete---------------------------------------------------------------------------------------------------------------
+
+{
+    "name": "pippo",
+}
+
+mosquitto_pub -h localhost -t Shelly/DeleteRoutines/ -m {\"name\":\"Spegni\"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    "name": "pippo",
+    "status": "enabled",
+    "condition": {
+        "operator": "OR",
+        "conditions": [
+            {
+                "id": "ID",
+                "operator": "<",
+                "command": "Valore"
+            },
+            {
+                "id": "ID",
+                "operator": "=",
+                "command": "Valore"
+            }
+        ]
+    },
+    "actions": [
+        {
+            "id": "ID",
+            "command": "Comando"
+        },
+        {
+            "id": "ID",
+            "command": "Comando"
+        },
+        {
+            "id": "ID",
+            "command": "Comando"
+        }
+    ]
+}
+
+
+IF(ID<"Valore")OR(iD="Valore")THEN(id="Comando"),(id="Comando"),(id="Comando")
+
+Shelly/CreateRoutines/.NOME      IF(ID<"Valore")OR(iD="Valore")THEN(iD="Valore"),(iD="Valore"),(iD="Valore")
+
+shelly/StateRoutines/.NOME       Enable/disable      
+
+shelly/DeleteRoutines/.NOME      yes/no
+
+
+
+
+
+Shelly/CreateRoutines/           {\"name\":\"pippo\",\"status\":\"enabled\",\"condition\":{\"operator\":\"OR\",\"conditions\":[{\"id\":\"ID\",\"operator\":\"<\",\"command\":\"Valore\"},{\"id\":\"ID\",\"operator\":\"=\",\"command\":\"Valore\"}]},\"actions\":[{\"id\":\"ID\",\"command\":\"Comando\"},{\"id\":\"ID\",\"command\":\"Comando\"},{\"id\":\"ID\",\"command\":\"Comando\"}]},"command":"Comando"},{"id":"ID","command":"Comando"}]}
+
+
+
+
+
+
+{\"name\":\"pippo\",\"status\":\"enabled\",\"condition\":{\"id\":\"ID\",\"operator\":\"<\",\"command\":\"Valore\"},\"actions\":{\"id\":\"ID\",\"command\":\"Comando\"}}
+
+{
+    "name": "pippo",
+    "status": "enabled",
+    "condition": 
+        {            
+            "id": "ID",
+            "msg": "msg",
+            "operator": "<",
+            "command": "Valore" 
+        },
+    "actions": 
+        {
+            "id": "ID",
+            "command": "Comando"
+        }
+    
+}
+
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"pippo\",\"status\":\"enabled\",\"condition\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"msg\":\"messaggio_on_off\",\"operator\":\"<\",\"command\":\"Valore\"},\"actions\":{\"id\":\"ID\",\"command\":\"Comando\"}}
+
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"pippo\",\"status\":\"enabled\",\"condition\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"msg\":\"messaggio_on_off\",\"operator\":\"<\",\"command\":\"on\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D4573\",\"command\":\"on\"}}

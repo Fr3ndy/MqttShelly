@@ -1,0 +1,17 @@
+{
+    "actions": {
+        "command": "WriteCSV",
+        "id": "NULL",
+        "param": [
+            "DWprova2"
+        ]
+    },
+    "condition": {
+        "command": "ex",
+        "id": "shellydw2-D751AF",
+        "msg": "messaggio_open",
+        "operator": "!="
+    },
+    "name": "DWprova2",
+    "status": "enabled"
+}

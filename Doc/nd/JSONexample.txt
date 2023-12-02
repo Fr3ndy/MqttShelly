@@ -1,0 +1,86 @@
+
+{
+    "name": "pippo",
+    "status": "enabled",
+    "condition": 
+        {            
+            "id": "ID",
+            "msg": "msg",
+            "operator": "<",
+            "command": "Valore" 
+        },
+    "actions": 
+        {
+            "id": "ID",
+            "command": "Comando"
+        }
+    
+}
+//{\"name\":\"pippo\",\"status\":\"enabled\",\"condition\":{\"id\":\"ID\",\"msg\":\"msg\",\"operator\":\"<\",\"command\":\"Valore\"},\"actions\":{\"id\":\"ID\",\"command\":\"Comando\"}}
+
+{
+    "name": "pippo",
+    "status": "enabled",
+    "condition": 
+        {            
+            "id": "shellyplug-s-80646F815A57",
+            "msg": "messaggio_plug",
+            "operator": "=",
+            "command": "on" 
+        },
+    "actions": 
+        {
+            "id": "ShellyBulbDuo-98CDAC2D21F9",
+            "command": "on"
+        }
+    
+}
+//{\"name\":\"pippo\",\"status\":\"enabled\",\"condition\":{\"id\":\"shellyplug-s-80646F815A57\",\"msg\":\"messaggio_plug\",\"operator\":\"=\",\"command\":\"on\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"command\":\"on\"}}
+
+{
+    "name": "pippa",
+    "status": "enabled",
+    "condition": 
+        {            
+            "id": "shellyplug-s-80646F815A57",
+            "msg": "messaggio_plug",
+            "operator": "=",
+            "command": "off" 
+        },
+    "actions": 
+        {
+            "id": "ShellyBulbDuo-98CDAC2D21F9",
+            "command": "off"
+        }
+    
+}
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"pippo\",\"status\":\"enabled\",\"condition\":{\"id\":\"shellyplug-s-80646F815A57\",\"msg\":\"messaggio_plug\",\"operator\":\"=\",\"command\":\"off\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"command\":\"off\"}}
+
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"Accendi\",\"status\":\"enabled\",\"condition\":{\"id\":\"shellyplug-s-80646F815A57\",\"msg\":\"messaggio_plug\",\"operator\":\"=\",\"command\":\"on\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"command\":\"on\"}}
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"Spegni\",\"status\":\"enabled\",\"condition\":{\"id\":\"shellyplug-s-80646F815A57\",\"msg\":\"messaggio_plug\",\"operator\":\"=\",\"command\":\"off\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"command\":\"off\"}}
+
+
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"Accendi luce\",\"status\":\"enabled\",\"condition\":{\"id\":\"shellyplug-s-80646F815A57\",\"msg\":\"messaggio_plug\",\"operator\":\"=\",\"command\":\"on\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"command\":\"on\"}}
+
+
+mosquitto_pub -h localhost -t Shelly/CreateRoutines/ -m {\"name\":\"SensorePorta\",\"status\":\"enabled\",\"condition\":{\"id\":\"shellydw2-D751AF\",\"msg\":\"messaggio_open\",\"operator\":\"=\",\"command\":\"open\"},\"actions\":{\"id\":\"ShellyBulbDuo-98CDAC2D21F9\",\"command\":\"on\"}}
+
+
+{
+    "name": "pippa",
+    "status": "enabled",
+    "condition": 
+        {            
+            "id": "shellyplug-s-80646F815A57",
+            "msg": "messaggio_plug",
+            "operator": "=",
+            "command": "off" 
+        },
+    "actions": 
+        {
+            "id": "NULL",
+            "command": "NOMEFUNZIONE",
+            "param": ["hello", "world"]
+        }
+    
+}
