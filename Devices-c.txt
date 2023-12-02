@@ -1,0 +1,18 @@
+BulbDuo
+ID: ShellyBulbDuo-98CDAC2D21F9
+Ip: 192.168.40.155
+Other: retain true,qos 2
+Broker: 192.168.40.166:1883
+
+Plug-s
+ID: shellyplug-s-80646F815A57
+Ip: 192.168.40.70
+Other: retain true,qos 2
+Broker: 192.168.40.166:1883
+
+Door-Windows-2
+ID: shellydw2-485519D751AF
+Ip: 192.168.40.143
+Other: retain true,qos 2
+Broker: 192.168.40.166:1883
+

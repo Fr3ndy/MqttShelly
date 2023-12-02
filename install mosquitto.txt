@@ -1,0 +1,46 @@
+
+
+Linux Ubuntu Mosquitto
+
+sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+sudo apt-get update
+sudo apt-get install mosquitto
+sudo apt-get install mosquitto-clients
+sudo apt clean
+
+//////////////////////////////////////////////////////////
+
+-h – the host to connect to
+-t – the topic of a message
+-m – the message
+-q – the quality of service
+-u - Username
+-P - Password
+
+CHI PUBLICA
+mosquitto_pub -h localhost -t kitchen/coffeemaker -m "on" -q 1 			-u <user_name> -P <password>
+
+CHI RICEVE
+mosquitto_sub -h localhost -t kitchen/coffeemaker -q 1				-u <user_name> -P <password>
+
+//////////////////////////////////////////////////////////
+
+shellies/ShellyBulbDuo-98CDAC2D21F9/light/0/command
+
+mosquitto_pub -h localhost -t shellies/ShellyBulbDuo-98CDAC2D21F9/light/0 -m "on"
+
+mosquitto_pub -h 192.168.40.157:1883 -t shellies/ShellyBulbDuo-98CDAC2D21F9/light/0/command -m off
+
+mosquitto_pub -h localhost -t shellies/ShellyBulbDuo-98CDAC2D21F9/light/0/set -m "{\"brightness\": 1}"
+
+
+
+
+BROKER CON CONF
+
+mosquitto.exe -v -c mosquitto.conf
+
+ACCENDERE/SPEGNERE LA LUCE
+
+mosquitto_pub -d -h localhost -t shellies/ShellyBulbDuo-98CDAC2D21F9/light/0/set -m off
+

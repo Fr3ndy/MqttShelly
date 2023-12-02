@@ -1,0 +1,19 @@
+{
+    "Action": {
+        "Command": "Pubblica",
+        "Function_Parameters": [
+            "prova",
+            "arrivato"
+        ],
+        "Id": "NULL"
+    },
+    "Condition": {
+        "Id": "shellyplug-s-80646F815A57",
+        "Message": "messaggio_energy",
+        "Operator": ">",
+        "Value": "-1"
+    },
+    "Name": "FunzioniPublish23",
+    "Only_On_Change": "true",
+    "Status": "enabled"
+}

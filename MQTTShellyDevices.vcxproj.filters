@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="File di origine">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="File di intestazione">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="File di risorse">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="File di origine\Ascoltatore">
+      <UniqueIdentifier>{cbbdcdaf-aaf0-4086-b893-c5053ab8efb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Dispositivi">
+      <UniqueIdentifier>{69f73507-c8f8-4466-84eb-a26502a5d743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Routines">
+      <UniqueIdentifier>{6c078209-7b9e-40f2-9ff3-0cbe39b32ff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Dispositivi\DispositiviShelly">
+      <UniqueIdentifier>{050952a8-5d5a-42f3-be12-124cade39e7c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="MqttClient.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Subject.cpp">
+      <Filter>File di origine\Ascoltatore</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonManagerRoutines.cpp">
+      <Filter>File di origine\Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="Routines.cpp">
+      <Filter>File di origine\Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="GestioneRoutines.cpp">
+      <Filter>File di origine\Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="FunzioniRoutines.cpp">
+      <Filter>File di origine\Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="SensoreDW2.cpp">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClCompile>
+    <ClCompile Include="BulbDuo.cpp">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClCompile>
+    <ClCompile Include="Plug.cpp">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClCompile>
+    <ClCompile Include="SensoreHT.cpp">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClCompile>
+    <ClCompile Include="GestioneDispositivo.cpp">
+      <Filter>File di origine\Dispositivi</Filter>
+    </ClCompile>
+    <ClCompile Include="DispositivoDefault.cpp">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>File di origine</Filter>
+    </ClInclude>
+    <ClInclude Include="Observer.h">
+      <Filter>File di origine\Ascoltatore</Filter>
+    </ClInclude>
+    <ClInclude Include="Subject.h">
+      <Filter>File di origine\Ascoltatore</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonManagerRoutines.h">
+      <Filter>File di origine\Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="Routines.h">
+      <Filter>File di origine\Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="GestioneRoutines.h">
+      <Filter>File di origine\Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="FunzioniRoutines.h">
+      <Filter>File di origine\Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="SensoreDW2.h">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClInclude>
+    <ClInclude Include="BulbDuo.h">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClInclude>
+    <ClInclude Include="Plug.h">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClInclude>
+    <ClInclude Include="SensoreHT.h">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClInclude>
+    <ClInclude Include="GestioneDispositivo.h">
+      <Filter>File di origine\Dispositivi</Filter>
+    </ClInclude>
+    <ClInclude Include="MqttClient.h">
+      <Filter>File di origine</Filter>
+    </ClInclude>
+    <ClInclude Include="DispositivoDefault.h">
+      <Filter>File di origine\Dispositivi\DispositiviShelly</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Downloads\json.hpp">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="libcrypto-1_1-x64.dll" />
+    <CopyFileToFolders Include="libssl-1_1-x64.dll" />
+    <CopyFileToFolders Include="mosquitto.dll" />
+    <CopyFileToFolders Include="mosquitto_dynamic_security.dll" />
+    <CopyFileToFolders Include="mosquittopp.dll" />
+  </ItemGroup>
+</Project>

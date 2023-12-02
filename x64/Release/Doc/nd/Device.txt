@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+Broker mqtt
+	Il client MQTT non permette di inserire username e password della connessione al broker
+
+	la connessione viene eseguita tramite codice compilato,si dovrà implementare la possibilità di inserire:
+	Password e username,
+	Verifica dei dati di connessione quali host,port ecc su file.
+
+
+
+Creazione dispositivo shelly
+
+	ATTENZIONE:
+	il dispositivo anche se creato non verifica il corretto funzionamento e/o la connessione al broker.
+
+
+	Dispositivi consentiti:
+	ShellyBulbDuo- 	Lampadina
+	shellyplug-s-	Plug(presa smart)
+	shellyht-		H&T(Sensore di  temeperatura e umidità)
+	shellydw2-		DW(Sensore di porta)
+
+	Dispotivo = tipo dispositivo + identificativo es(shellyplug-s-80646F815A57)
+	
+	Creazione 
+
+	Shelly/CreateDevices/ 
+	Shelly/DeleteDevices/
+
+
+	mosquitto_pub -h localhost -t Shelly/CreateDevices/ -m shellyplug-s-80646F815A57
+	mosquitto_pub -h localhost -t Shelly/DeleteDevices/ -m shellyplug-s-80646F815A57
+
+Gestione Routines
+	
+	

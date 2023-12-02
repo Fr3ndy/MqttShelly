@@ -1,0 +1,19 @@
+{
+    "Action": {
+        "Command": "Pubblica",
+        "Function_Parameters": [
+            "prova",
+            "Plug spento"
+        ],
+        "Id": "NULL"
+    },
+    "Condition": {
+        "Id": "shellyplug-s-80646F815A57",
+        "Message": "messaggio_plug",
+        "Operator": "=",
+        "Value": "off"
+    },
+    "Name": "FunzioniPublish",
+    "Only_On_Change": "false",
+    "Status": "enabled"
+}

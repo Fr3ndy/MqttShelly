@@ -1,0 +1,83 @@
+Exemple Usage
+		Bulb Gen 1---------------------------------------------------------------------------------------------------------------------------
+			Lampadina l1(&client, "ShellyBulbDuo-98CDAC2D21F9");	connect to client->ID bulb
+			MqttClient::subject.attach(&l1);						attach object to callback function
+
+			void set_on();											turn on bulb
+			void set_off();											turn off
+			void set_state(string state);							set state EX(	string status = "{ \"brightness\": 100, \"white\" : 100, \"temp\" : 6500, \"turn\" : \"on\", \"transition\" : 500 }";	)
+
+			void get_state();										get state
+			void get_power();										get power consumption in watt
+			void get_energy();										//   //		//		  in watt/h
+
+			int messaggio_on_off = 0;								0=off	1=on
+			string messaggio_power;
+			string messaggio_energy;
+
+		Plug s gen1---------------------------------------------------------------------------------------------------------------------------
+
+			Plug p1(&client, "shellyplug-s-80646F815A57");
+			MqttClient::subject.attach(&p1);
+
+			void set_on();
+			void set_off();
+
+			void get_state();										to report status : on, off or overpower
+			void get_power();										to report instantaneous power consumption rate in Watts
+			void get_energy();										to report amount of energy consumed in Watt - minute
+			void get_overpower_value();								reports the value in Watts, on which an overpower condition is detected
+			void get_temperature();									reports internal device temperature in °C
+			void get_temperature_f();								reports internal device temperature in °F
+			void get_overtemperature();								reports 1 when device has overheated, normally 0
+
+			int messaggio_on_off = 0;
+			string messaggio_power;
+			string messaggio_energy;
+			string messaggio_overpower_value;
+			string messaggio_temperature;
+			string messaggio_temperature_f;
+			string messaggio_overtemperature;
+
+		Humidity & Temperature Gem 1-----------------------------------------------------------------------------------------------------------
+
+			Umtemp ht1(&client, "shellyht-CA3860");
+			MqttClient::subject.attach(&ht1);
+
+			void get_temp();										in °C or °F depending on configuration
+			void get_hum();											RH in %
+			void get_battery();										battery level in %
+			void get_error();										if different from 0, there is an error with the sensor
+			void get_reason_wake();									list of reasons which woke up the device : battery, button, periodic, poweron, sensor, alarm
+			void get_ext_power();									true, if the device is usb powered
+
+			string messaggio_temp;
+			string messaggio_hum;
+			string messaggio_battery;
+			string messaggio_errore;
+			string messaggio_reason;
+			string mesaggio_ext_power;
+
+		Door/Windows Gen 1----------------------------------------------------------------------------------------------------------------------
+
+			Doorwindows dw1(&client, "shellydw2-D751AF");
+			MqttClient::subject.attach(&dw1);
+
+			void get_state();										:door / window sensor state open or close
+			void get_tilt();										: tilt in °, 0..180
+			void get_vibration();									: 0 - no vibration, 1 - vibration detected
+			void get_lux();											: luminance level in lux
+			void get_battery();										: battery level in %
+			void get_temperature();									: Door / Window 2 only Temperature, in C or F as per user configuration
+			void get_error();										: if different from 0, there is an error with the sensor
+			void get_act_reasons();									: list of reasons which woke up the device : battery, button, periodic, poweron, sensor, movement, temperature, light
+
+			int messagio_open = 0;
+			string messagio_tilt;
+			string messagio_vibration;
+			string messagio_lux;
+			string messagio_battery;
+			string messagio_temperature;
+			string messagio_error;
+			string messagio_act_reason;
+	*/
